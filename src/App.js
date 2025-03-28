@@ -1,33 +1,29 @@
-import React, {useEffect,useState} from 'react';
+import React from 'react';
 import './App.css';
+import ListOfGifs from './components/ListOfGifs'
 
-const apiURL='https://api.giphy.com/v1/gifs/search?api_key=lwM8kLL34CmoBAkK0hOrhnMbAyxuQQyJ&q=motos&limit=10&offset=0&rating=g&lang=en'
+import {Link, Route } from 'wouter'
 
-
-function App() {
-  const [gifs, setGifs] =  useState([])
-  
-  useEffect(function ()  {
-    fetch(apiURL)
-      .then(res => res.json())
-      .then(response => {
-        const{data=[]} = response
-        if(Array.isArray(data)){
-          const gifs = data.map(image => image.images.downsized_medium.url)
-          setGifs(gifs)
-        }
-      })
-  },[])
+export default function App() {
 
   return (
     <div className="App">
-      <section className="App-content">
-        {
-          gifs.map(singleGif => <img src={singleGif} alt="Gif" />)
-        }
+     <header className='App-header'>
+        <h1>App de Gifs</h1>
+     </header>
+
+      <section className="App-content gif-grid">
+      <img className='gif-icon' src='https://cdn-icons-png.flaticon.com/128/337/337936.png'></img>
+
+        <h1>Los Gifs de Fran</h1>
+        <Link to='/gif/star-wars'>Gifs de Star Wars</Link>
+        <Link to='/gif/marc-marquez'>Gifs de Marc Marquez</Link>
+        <Link to='/gif/dogs'>Gifs de Perros</Link>
+        <Route path="/gif/:keyword" component={ListOfGifs} />
       </section>
+      <footer className='App-footer'>
+        <p>© 2025 Fran</p>
+      </footer>
     </div>
   );
 }
-
-export default App;

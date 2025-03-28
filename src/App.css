@@ -3,7 +3,7 @@
 }
 
 .App-content {
-  background-color: #282c34;
+  background-color: #5d5858;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -11,4 +11,45 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.App-header{
+  background-color: #2e4e8f;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.search{
+  background-color: black;
+  display: flex;
+  flex-direction: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+a{
+  color: rgb(45, 140, 191);
+  text-decoration: none;
+  font-size: 25px;
+  
+}
+footer{
+  background-color: #2e4e8f;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.gif-icon{
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
 }
