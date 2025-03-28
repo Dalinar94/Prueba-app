@@ -23,15 +23,6 @@
   color: white;
 }
 
-.search{
-  background-color: black;
-  display: flex;
-  flex-direction: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 a{
   color: rgb(45, 140, 191);
   text-decoration: none;
@@ -52,4 +43,10 @@ footer{
   width: 100px;
   height: 100px;
   margin-top: 20px;
+}
+.gif-grid{
+  display: flex;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+  padding: 10px;
 }
