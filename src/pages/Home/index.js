@@ -24,6 +24,7 @@ export default function Home() {
         <div>
             <form onSubmit={handleSubmit}>
                 <input placeholder='Search a gif here...' onChange={handleChange} type='text' value={keyword}/>
+                <button>Buscar</button>
             </form>
             <h3 className="App-title">Los gifs más populares</h3>
             <ul>
