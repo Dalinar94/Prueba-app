@@ -22,13 +22,12 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 a{
   color: rgb(45, 140, 191);
   text-decoration: none;
   font-size: 25px;
-  
 }
+
 footer{
   background-color: #2e4e8f;
   min-height: 10vh;

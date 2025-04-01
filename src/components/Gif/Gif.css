@@ -1,17 +1,18 @@
 .Gif{
-    border:1px solid #ccc;
-    border-radius: 6px;
-    color: white;
     display: flex;
     flex-direction: column;
     text-decoration: none;
     margin: 5px;
     width: 100%;
-    padding: 15px;
+    padding: 0px;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .Gif grid
-
 
 .Gif h4{
     margin: 0;;

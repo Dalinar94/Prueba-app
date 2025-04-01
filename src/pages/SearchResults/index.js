@@ -1,26 +1,20 @@
-import React,{useEffect,useState} from'react';
-import Spinner from './components/Spinner';
-import ListOfGifs from './components/ListOfGifs';
-import getGifs from './services/getGifs';
+import React from 'react'
+ import Spinner from '../../components/Spinner'
+ import ListOfGifs from '../../components/ListOfGifs'
+ import {useGifs} from '../../hooks/useGifs'
+ //ESTA ES LA PAGINA UNA VEZ REALIZADA LA BUSQUEDA
 
-export default function SearhResults({params}) {
-  const {keyword} = params;
-  const [loading, setLoading] = useState(false);
-  const [gifs, setGifs] = useState([]);
-
-  useEffect(function() {
-    setLoading(true);
-    getGifs({keyword})
-     .then(gifs => {
-        setGifs(gifs)
-        setLoading(false)
-      })
-  }, [keyword]);
-
-  return <>
-    {loading
-    ? <Spinner />
-    : <ListOfGifs gifs={gifs}/>
-  }
-  </>
-}
+// La keyword es la clave para buscar en GIPHY
+ export default function SearchResults ({ params }) {
+   const { keyword } = params
+   //llama al hook useGifs para buscar los gifs
+   const {loading, gifs} = useGifs({ keyword  }) 
+   
+   return <>
+     {loading
+       ? <Spinner />
+       : <ListOfGifs gifs={gifs} />
+     }
+    
+   </>
+ }
