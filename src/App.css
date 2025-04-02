@@ -2,50 +2,88 @@
   text-align: center;
 }
 
-.App-content {
-  background-color: #5d5858;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-.App-header{
-  background-color: #2e4e8f;
-  min-height: 20vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-a{
-  color: rgb(45, 140, 191);
-  text-decoration: none;
-  font-size: 25px;
+.App-logo {
+  margin: 10px auto;
+  padding: 20px 0;
+  width: 144px;
 }
 
-footer{
-  background-color: #2e4e8f;
-  min-height: 10vh;
+.App-logo img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.App-title {
+  color: var(--theme-body-txt);
+  margin-top: 0.6rem;
+}
+
+.App-content {
+  background-color: rgb(148, 148, 135);
+  color: var(--theme-body-txt);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
+  padding: 16px;
+  text-align: left;
 }
-.gif-icon{
-  width: 100px;
-  height: 100px;
-  margin-top: 20px;
-}
-.gif-grid{
+
+/*----------*/
+
+.App-main {
   display: flex;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 10px;
-  padding: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.App-wrapper {
+	width: 100%;
+	max-width: 90rem;
+	margin: 0 auto;
+	padding: 0 0.5em;
+}
+
+.App-results {
+  flex-shrink: 2;
+  width: 100%;
+}
+
+.App-category {
+  margin-bottom: 25px;
+  width: 100%;
+  margin: 25px;
+}
+
+
+@media screen and (min-width: 55rem){
+  .App-main{
+    flex-direction: initial;
+  }
+
+  .App-category{
+    position: sticky;
+    top: var(--search-size-mx-h);
+    width: 40%;
+    max-width: 200px;
+    margin: 20px;
+  }
+}
+
+.btn {
+  border: 1px solid transparent;
+  padding: .5rem 1rem;
+  background-color: var(--brand-color_3);
+  color: var(--theme-body-txt);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn[disabled] {
+  opacity: .3;
+  pointer-events: none;
+}
+
+.btn:hover {
+  background-color: var(--brand-color_6);
 }
