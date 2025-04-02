@@ -1,6 +1,6 @@
 import React from 'react'
- import {Link} from 'wouter'
- 
+import {Link} from 'wouter'
+import './Category.css'
  export default function Category({name, options = []}){
      return <>
          <h3 className="App-title">{name}</h3>
